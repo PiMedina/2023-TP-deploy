@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="css/styleiniciarsesion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="contenedor">
+        <h1 class="titulo">Sistema de Comunidades</h1>
+        <nav class="menu">
+            <a href="/">Inicio</a>
+            <a href="#">Acerca de Nosotros</a>
+        </nav>
+    </div>
+</header>
+
+<section class="form-login" >
+    <h5>Bienvenido!</h5>
+    <form method="post" action="/login">
+        <input class="controls" type="text" name="usuario" placeholder="Ingrese usuario">
+        <input class="controls" type="password" name="contrasenia" pattern=".{6,}" placeholder="Ingrese contraseña">
+        <button class="buttons" type="submit">Iniciar Sesion</button>
+    </form>
+    <p><a href="#">¿Olvidó su contraseña?</a></p>
+    <button class="buttons" type="submit"><a href="/registro" >Registrarse</a></button>
+</section>
+</body>
+</html>

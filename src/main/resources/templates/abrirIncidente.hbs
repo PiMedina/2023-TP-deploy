@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no ,initial-scale=1 ,maximum-scale=1 ,minimum-scale=1">
+    <title> Incidentes </title>
+
+    <link rel="stylesheet" href="/css/styleincidentes.css">
+
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body  background ="/img/comunidad.jpg">
+<header>
+
+    <div class="contenedor">
+        <h1 class= "titulo"> Sistema de Comunidades </h1>
+        <input type="checkbox" id="menu-bar">
+
+        <nav class="menu">
+            <a href="/incidentes">Incidentes</a>
+            <a href="/incidentes/crear">Abrir Incidentes</a>
+            <a href="/rankings">Rankings</a>
+            <a href="#">Servicios</a>
+            <a href="/login">Cerrar Sesion</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <form class="form-login" method="post" >
+
+        <h5>Apertura de incidente </h5>
+
+        <label>nombre del Incidente:</label>
+        <input class="controls" type="text" name="nombreIncidente" placeholder="ingrese breve descripción">
+
+        <label>Servicio:</label>
+        <select class="controls"  name="servicio">
+            <option></option>
+            {{#each servicio}}
+                <option>{{this.getNombreServicioPrestado}}</option>
+                {{/each}}
+        </select>
+
+        <br>
+
+        <textarea name="observaciones" placeholder="Escriba aquí una observación..."></textarea>
+
+        <br>
+        <button class="buttons" type="submit"><a> Agregar incidente </a></button><!--registro usuario nuevo-->
+
+    </form>
+
+</main>
+
+</body>
+
+</html>

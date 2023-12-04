@@ -1,0 +1,26 @@
+{{#partial "contenidoP" }}
+<main>
+
+    <section class="form-login">
+
+        <h5>Editar Entidad Prestadora</h5>
+
+        <form class="form-registro" method="post" action="/entidadesPrestadorasP/{{entidadPrestadora.getId}}">
+        <p1>Nombre Entidad Prestadora:</p1>
+        <input class="controls" type="text" name="nombre_edit" placeholder="{{entidadPrestadora.getNombre}}">
+
+        <button class="buttons" type="submit"> Editar Entidad Prestadora </button>
+        <button class="buttons" type="button" onclick="volverAtras()">Volver</button>
+        </form>
+
+    </section>
+
+    <script>
+        function volverAtras() {
+            window.history.back();
+        }
+    </script>
+
+</main>
+{{/partial}}
+{{> templates/homePropietarioBase }}

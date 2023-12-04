@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar nuevo usuario</title>
+    <link rel="stylesheet" href="css/registrar_usuario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+</head>
+<body background ="img/comunidad.jpg">
+<header>
+
+    <div class="contenedor">
+        <h1 class= "titulo"> Sistema de Comunidades</h1>
+        <input type="checkbox" id="menu-bar">
+
+        <nav class="menu">
+            <a href="/">Inicio</a>
+            <a href="#">Acerca de Nosotros</a>
+            <a href="#"></a>
+        </nav>
+
+
+    </div>
+</header>
+<form class="form-registro" method="post" action="/registro">
+
+    <h5>Registro nuevo usuario</h5>
+
+    <p>Nombre de Usuario: </p>
+    <input class="controls" type="text" name="usuario">
+
+    <p>Nombre:</p>
+    <input class="controls" type="text" name="nombre">
+
+    <p>Apellido:</p>
+    <input class="controls" type="text" name="apellido">
+
+    <p>Contraseña:</p>
+    <input class="controls" type="password" name="contrasenia" pattern=".{6,}">
+
+    <p>E-mail:</p>
+    <input class="controls" type="text" name="email">
+
+    <label>Tipo De Registro</label><br/>
+    <div class="controls1">
+        <input  type="radio" name="category" value="Ciudadano" checked>  Ciudadano </label><br/>
+        <input  type="radio" name="category" value="Propietario">  Propietario </label><br/>
+    </div>
+
+    <!-- <button class="buttons" type="submit"><a href="/iniciarSesion"> Registrarse</a></button> entra al usuario q corresponde propietario o ciudadano -->
+    <button class="buttons" type="submit"> Registrarse </button>
+
+    <button class="buttons" type="button"><a href="/login">Volver</a></button>
+
+</form>
+</body>
+</html>

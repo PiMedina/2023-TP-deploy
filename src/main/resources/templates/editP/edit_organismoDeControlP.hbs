@@ -1,0 +1,27 @@
+{{#partial "contenidoP" }}
+
+  <main>
+      <section class="form-login">
+
+          <h5>Editar Organismo de Control</h5>
+
+          <form class="form-registro" method="post" action="/organismosDeControlP/{{organismoDeControl.getId}}">
+              <p1>Nombre Organismo De Control:</p1>
+
+              <input class="controls" type="text" name="nombre_edit" placeholder="{{organismoDeControl.getNombre}}">
+
+              <button class="buttons" type="submit"> Editar Organismo De Control</button>
+              <button class="buttons" type="button" onclick="volverAtras()">Volver</button>
+          </form>
+      </section>
+
+      <script>
+          function volverAtras() {
+              window.history.back();
+          }
+      </script>
+
+  </main>
+
+{{/partial}}
+{{> templates/homePropietarioBase }}

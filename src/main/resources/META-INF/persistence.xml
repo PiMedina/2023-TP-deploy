@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+  <persistence-unit name="simple-persistence-unit" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <properties>
+
+      <!-- configurado para render-->
+      <property name="hibernate.archive.autodetection" value="class"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+      <property name="hibernate.connection.url" value="jdbc:postgresql://dpg-clmknbcjtl8s73a5m9ug-a.oregon-postgres.render.com/base_postgresql" />
+      <property name="hibernate.connection.username" value="base_postgresql_user" />
+      <property name="hibernate.connection.password" value="oLjC6LP5Y7bcNGAkKxzFgE9kFe24Gw0P" />
+
+      <!-- el que siempre usamos"/>
+      <property name="hibernate.archive.autodetection" value="class"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/tp_dds" />
+      <property name="hibernate.connection.username" value="root" />
+      <property name="hibernate.connection.password" value="123456" /> -->
+
+      <!--<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+      <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:app-db"/>
+      <property name="hibernate.connection.username" value="sa"/>
+      <property name="hibernate.connection.password" value=""/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>-->
+
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="use_sql_comments" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>  <!--update por create-->
+    </properties>
+
+  </persistence-unit>
+
+</persistence> 
